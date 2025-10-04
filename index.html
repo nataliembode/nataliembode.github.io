@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natalie Bode — Cool Girl Corporate • Stylist & Creator</title>
+  <meta name="description" content="Natalie Bode — Platinum Top Creator. Elevated basics, cool‑girl corporate style, styling services, and brand partnerships." />
+  <meta property="og:title" content="Natalie Bode — Cool Girl Corporate" />
+  <meta property="og:description" content="Platinum Top Creator. Elevated basics & luxury‑minimal style. Work with me, shop my edits, and view my styling services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nataliembode.com/" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0b0b0b; --muted:#6b6b6b; --soft:#f5f4f2; --line:#eeeeec; --accent:#111111; --pill:#f0efed;
+      --radius:18px; --radius-lg:28px; --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{width:min(1120px,92vw);margin-inline:auto}
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(255,255,255,.8); border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between; padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+    .brand h1{font-size:18px;margin:0;font-weight:600;letter-spacing:.2px}
+    .navlinks{display:flex;gap:20px;align-items:center}
+    .navlinks a{font-size:14px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+    .btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .btn.ghost{background:transparent}
+    /* Hero */
+    .hero{padding:64px 0 24px;border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:10px;background:var(--pill);border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:#333;font-size:13px;margin-bottom:14px}
+    .badge svg{width:16px;height:16px}
+    .title{font-size:44px;line-height:1.06;letter-spacing:-.02em;margin:0 0 12px;font-weight:700}
+    .subtitle{color:var(--muted);font-size:16px;margin:0 0 22px}
+    .cta{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-card{background:var(--soft);border:1px solid var(--line);padding:18px;border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+    .hero-img{border-radius:var(--radius-lg);overflow:hidden}
+    /* Sections */
+    section{padding:72px 0;border-bottom:1px solid var(--line)}
+    .section-title{font-family:"Playfair Display",serif;font-weight:600;letter-spacing:.2px;margin:0 0 28px;font-size:30px}
+    .grid{display:grid;gap:18px}
+    .cards{grid-template-columns:repeat(3,1fr)}
+    .card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .price{margin-top:10px;font-weight:600}
+    .stack{display:flex;flex-direction:column;gap:10px}
+    .row{display:flex;flex-wrap:wrap;gap:12px}
+    .links a{border:1px solid var(--line);padding:12px 14px;border-radius:999px}
+    /* Split */
+    .split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    /* Footer */
+    footer{padding:40px 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:24px;color:var(--muted)}
+    .socials{display:flex;gap:14px}
+    .socials a{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px}
+    /* Mobile */
+    @media (max-width: 900px){
+      .hero-grid,.split{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .title{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img class="logo" src="https://via.placeholder.com/150" alt="Natalie profile"/>
+        <h1>Natalie Bode</h1>
+      </div>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#shop">Shop</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.5 1.6 6.7L12 16.8 5.8 20l1.6-6.7L2.3 8.8l6.8-.6L12 2z"/></svg>
+            <span>Top Creator • Platinum</span>
+          </div>
+          <h2 class="title">Cool Girl Corporate™ meets elevated basics.</h2>
+          <p class="subtitle">Stylist & creator helping modern women look polished and feel powerful — with clear, data‑driven style rules. Chicago → world.</p>
+          <div class="cta">
+            <a class="btn primary" href="#services">Work with me</a>
+            <a class="btn" href="#shop">Shop my edits</a>
+          </div>
+        </div>
+        <div class="hero-card hero-img">
+          <img src="https://via.placeholder.com/800x600" alt="Editorial fashion image placeholder"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div>
+          <h3 class="section-title">About</h3>
+          <p>I'm Natalie — an engineer‑turned‑creator known for luxury‑minimal style and the <em>Cool Girl Corporate™</em> blueprint. I break fashion down like a system: simple frameworks, sharp edits, and wearable rules that build confidence fast.</p>
+          <div class="row links" style="margin-top:16px">
+            <a href="https://www.amazon.com/shop/nataliebodee" target="_blank" rel="noopener">Amazon Storefront</a>
+            <a href="https://shopmy.us/nataliebode" target="_blank" rel="noopener">ShopMy</a>
+            <a href="https://www.instagram.com/nataliembode/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@styledbynattyb" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+        <div class="hero-img"><img src="https://via.placeholder.com/600x600" alt="Natalie portrait placeholder"></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h3 class="section-title">Services</h3>
+        <div class="grid cards">
+          <div class="card">
+            <h3>Quick Fix</h3>
+            <p>Rapid DM consult: links, sizing, and two outfit solutions for your event or work look.</p>
+            <div class="price">$35</div>
+          </div>
+          <div class="card">
+            <h3>Mini Style Guide</h3>
+            <p>Personalized capsule edit and 5 outfits tailored to your role, climate, and budget.</p>
+            <div class="price">$75</div>
+          </div>
+          <div class="card">
+            <h3>Style Refresh</h3>
+            <p>Wardrobe audit + signature look system. Shopping list with elevated basics that last.</p>
+            <div class="price">$150</div>
+          </div>
+        </div>
+        <div class="cta" style="margin-top:16px">
+          <a class="btn primary" href="#contact">Book a consult</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="container">
+        <h3 class="section-title">Shop the edits</h3>
+        <p class="subtitle">Capsules and curated lists I actually wear.</p>
+        <div class="row links" style="margin-top:10px">
+          <a href="https://www.amazon.com/shop/nataliebodee/list/2VXFJJH4PE0AU" target="_blank" rel="noopener">Cool Girl Corporate</a>
+          <a href="https://www.amazon.com/shop/nataliebodee" target="_blank" rel="noopener">Cool Girl Closet</a>
+          <a href="https://shopmy.us/nataliebode/collections" target="_blank" rel="noopener">ShopMy Collections</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="container">
+        <h3 class="section-title">Brands & Features</h3>
+        <div class="grid cards" style="grid-template-columns:repeat(4,1fr)">
+          <div class="card"><h3>Princess Polly</h3><p>Fashion</p></div>
+          <div class="card"><h3>Poshmark</h3><p>Marketplace</p></div>
+          <div class="card"><h3>Modern Luxury</h3><p>Editorial</p></div>
+          <div class="card"><h3>Amazon</h3><p>Platinum Top Creator</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h3 class="section-title">Contact</h3>
+        <p class="subtitle">Brands & clients — reach out below. For styling, include your city, size, budget, and timing.</p>
+        <div class="grid" style="grid-template-columns:1fr .9fr; gap:22px">
+          <form class="card stack" action="mailto:hello@nataliembode.com" method="POST" enctype="text/plain">
+            <input style="padding:14px;border-radius:12px;border:1px solid var(--line)" type="text" name="name" placeholder="Name" required>
+            <input style="padding:14px;border-radius:12px;border:1px solid var(--line)" type="email" name="email" placeholder="Email" required>
+            <textarea style="padding:14px;border-radius:12px;border:1px solid var(--line);min-height:140px" name="message" placeholder="Tell me about your project or styling request" required></textarea>
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+          <div class="card stack">
+            <div>
+              <strong>Press & Partnerships</strong>
+              <p class="subtitle">Sponsored content, UGC, events, speaking.</p>
+            </div>
+            <div>
+              <strong>Styling Clients</strong>
+              <p class="subtitle">Corporate wardrobes, post‑grad transitions, capsule builds.</p>
+            </div>
+            <div>
+              <strong>Social</strong>
+              <div class="row links">
+                <a href="https://www.instagram.com/nataliembode/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/@styledbynattyb" target="_blank" rel="noopener">TikTok</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> Natalie Bode · All rights reserved</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/nataliembode/" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+        <a href="https://www.tiktok.com/@styledbynattyb" aria-label="TikTok" target="_blank" rel="noopener">TT</a>
+        <a href="mailto:hello@nataliembode.com" aria-label="Email">@</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
