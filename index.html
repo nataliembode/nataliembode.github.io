@@ -85,9 +85,27 @@
     .btn-wide img{height:28px;margin-right:10px;border-radius:6px}
     .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
+    /* Feature row (Real Simple) */
+    .feature-link{
+      display:inline-flex; align-items:center; gap:16px;
+      padding:12px 16px; border:1px solid var(--line); border-radius:12px; background:#fff;
+      box-shadow:var(--shadow); font-weight:600;
+    }
+    .feature-link img{height:64px;width:auto}
+    .feature-link span{white-space:nowrap}
+    .feature-link:hover{transform:translateY(-2px)}
+
     /* Instagram embed */
     .insta-wrap{display:flex;justify-content:center}
     .instagram-media{max-width:540px !important;width:100% !important;margin:0 auto !important;}
+
+    /* Tiny toast for copy fallback */
+    .toast{
+      position:fixed; left:50%; bottom:20px; transform:translateX(-50%);
+      background:#111; color:#fff; padding:10px 14px; border-radius:10px; font-size:13px;
+      box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .25s ease;
+    }
+    .toast.show{opacity:1}
 
     /* Dock */
     .dock{position:sticky;bottom:0;z-index:45;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(8px);border-top:1px solid var(--line)}
@@ -102,6 +120,8 @@
       .gallery{grid-template-columns:1fr}
       .h-title{font-size:36px}
       .chip img{height:32px}
+      .feature-link img{height:56px}
+      .feature-link span{font-size:14px}
     }
   </style>
 </head>
@@ -153,7 +173,8 @@
         <p class="h-sub">Cool Girl Style made chic for everyday wear. From your 9-5 to your 5-9.</p>
         <div class="btn-row">
           <a class="btn primary" href="https://www.amazon.com/shop/nataliebodee" target="_blank">Shop Amazon</a>
-          <a class="btn" href="mailto:natalie@nataliembode.com">Contact</a>
+          <!-- Updated mailto with subject/body and an id for JS fallback -->
+          <a id="pressBtn" class="btn" href="mailto:natalie@nataliembode.com?subject=Press%20%26%20Partnerships%20Inquiry&body=Hi%20Natalie%2C%0A%0A" data-email="natalie@nataliembode.com">Press & Partnerships</a>
         </div>
       </div>
       <div class="card">
@@ -209,7 +230,8 @@
           <div>
             <p>I build simple, repeatable rules that make getting dressed easy: tailored silhouettes, power neutrals, and quality fabrics. Chicago → world.</p>
             <div class="btn-row" style="margin-top:10px">
-              <a class="btn" href="mailto:natalie@nataliembode.com">Press & Partnerships</a>
+              <!-- same id here if you want another press button here too -->
+              <a class="btn" href="mailto:natalie@nataliembode.com?subject=Press%20%26%20Partnerships%20Inquiry&body=Hi%20Natalie%2C%0A%0A">Press & Partnerships</a>
               <a class="btn" href="https://www.instagram.com/nataliembode/" target="_blank">Instagram</a>
               <a class="btn" href="https://www.tiktok.com/@styledbynattyb" target="_blank">TikTok</a>
             </div>
@@ -219,8 +241,9 @@
 
       <div class="block" style="margin-top:14px;text-align:center">
         <h2>Features</h2>
-        <a href="https://www.realsimple.com/office-fashion-trends-11795376" target="_blank">
-          <img src="RealSimple.png" alt="Real Simple Magazine" style="height:60px;margin-top:12px">
+        <a class="feature-link" href="https://www.realsimple.com/office-fashion-trends-11795376" target="_blank" rel="noopener">
+          <img src="RealSimple.png" alt="Real Simple Magazine">
+          <span>Read the Real Simple feature →</span>
         </a>
       </div>
     </div>
@@ -241,6 +264,39 @@
 
   <!-- Instagram embed script -->
   <script async src="https://www.instagram.com/embed.js"></script>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Fallback for Press & Partnerships button if no mail app is configured:
+    (function () {
+      const btn = document.getElementById('pressBtn');
+      if (!btn) return;
+      btn.addEventListener('click', async function (e) {
+        // Let mailto try first — browsers will handle it.
+        // After a short delay, also try copying the email so users without a mail app have it handy.
+        const email = btn.getAttribute('data-email') || 'natalie@nataliembode.com';
+        setTimeout(async () => {
+          try {
+            await navigator.clipboard.writeText(email);
+            showToast('Email copied: ' + email);
+          } catch (_) {
+            // clipboard not available—silently ignore
+          }
+        }, 600);
+      });
+    })();
+
+    function showToast(msg){
+      let t = document.querySelector('.toast');
+      if(!t){
+        t = document.createElement('div');
+        t.className = 'toast';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(()=> t.classList.remove('show'), 1800);
+    }
+  </script>
 </body>
 </html>
