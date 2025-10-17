@@ -274,7 +274,7 @@
       btn.addEventListener('click', async function (e) {
         // Let mailto try first — browsers will handle it.
         // After a short delay, also try copying the email so users without a mail app have it handy.
-        const email = btn.getAttribute('data-email') || 'natalie@nataliembode.com';
+        const email = btn.getAttribute('data-email') || 'marissa.toomey@shinetalentgroup.com';
         setTimeout(async () => {
           try {
             await navigator.clipboard.writeText(email);
